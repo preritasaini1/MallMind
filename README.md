@@ -1,7 +1,7 @@
 # 🏬 MallMind  
 ### Hyper-Personalized Agentic Shopping Concierge for Smart Malls
 
-![MallMind Dashboard](./photos/Dashboard.png)
+![MallMind Dashboard](Photos/Dashboard.png)
 
 ---
 
@@ -16,12 +16,12 @@ In an era dominated by e-commerce, MallMind brings personalization and digital v
 
 | **AI Chat Concierge** | **Smart Navigation** |
 |:---:|:---:|
-| ![Chat Interface](./photos/Chat_interface.png) | ![Route Navigation](./photos/Closeststore_route.png) |
+| ![Chat Interface](Photos/Chat_interface.png) | ![Route Navigation](./photos/Closeststore_route.png) |
 | *Conversational AI understands intent and budget* | *Real-time route optimization between stores* |
 
 | **Live Inventory Scout** | **Virtual Try-On (GenAI)** |
 |:---:|:---:|
-| ![Live Inventory](./photos/Live_Inventory.png) | ![Try-On Feature](./photos/Tryon_feature.png) |
+| ![Live Inventory](Photos/Live_Inventory.png) | ![Try-On Feature](./photos/Tryon_feature.png) |
 | *Simulated real-time stock and pricing checks* | *Advanced AI-powered visual try-on experience* |
 
 ---
@@ -48,7 +48,7 @@ We built a scalable PWA that:
 
 MallMind is powered by a **Multi-Agent Orchestration Layer**. Instead of a single chatbot, a team of specialized agents collaborates to serve the user:
 
-![Six Agents Workflow](./photos/Six_Agents.png)
+![Six Agents Workflow](Photos/Six_Agents.png)
 
 - **🕵️‍♂️ Inventory Scout:** Queries store APIs for specific items, sizes, and pricing.
 - **👗 Personal Stylist:** Matches recommendations to the user's style and occasion.
