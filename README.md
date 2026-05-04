@@ -101,6 +101,14 @@ MallMind/
 
 ---
 
+## 📱 Try it on Mobile  
+
+Scan the QR code below to instantly launch the MallMind concierge on your smartphone. Experience the full PWA features, including indoor navigation and AI chat, without any installation.
+
+![MallMind App QR](Photos/MallMind_App_QR.png)
+
+---
+
 ## 🛠 Installation & Setup  
 
 ### 1. Prerequisites
