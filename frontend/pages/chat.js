@@ -5,11 +5,11 @@ import StoreCard from '../components/StoreCard';
 import { fetchShoppingRecommendations } from '../lib/api';
 
 const QUICK_PROMPTS = [
+  "Lipstick under ₹500",
+  "Home decor",
   "Blue suit under ₹8,000",
   "Sneakers + coffee",
   "Gift for mom under ₹2k",
-  "Kids birthday outfit",
-  "Bed sheet + Pillows",
 ];
 
 const MOCK_STORES = [
