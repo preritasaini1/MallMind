@@ -16,12 +16,12 @@ In an era dominated by e-commerce, MallMind brings personalization and digital v
 
 | **AI Chat Concierge** | **Smart Navigation** |
 |:---:|:---:|
-| ![Chat Interface](Photos/Chat_interface.png) | ![Route Navigation](./photos/Closeststore_route.png) |
+| ![Chat Interface](Photos/Chat_interface.png) | ![Route Navigation](Photos/Closeststore_route.png) |
 | *Conversational AI understands intent and budget* | *Real-time route optimization between stores* |
 
 | **Live Inventory Scout** | **Virtual Try-On (GenAI)** |
 |:---:|:---:|
-| ![Live Inventory](Photos/Live_Inventory.png) | ![Try-On Feature](./photos/Tryon_feature.png) |
+| ![Live Inventory](Photos/Live_Inventory.png) | ![Try-On Feature](Photos/Tryon_feature.png) |
 | *Simulated real-time stock and pricing checks* | *Advanced AI-powered visual try-on experience* |
 
 ---
