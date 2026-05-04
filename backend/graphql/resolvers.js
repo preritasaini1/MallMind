@@ -239,10 +239,14 @@ export const resolvers = {
         if (intent.product) {
           // Clean the product string of budget-related keywords for cleaner DB search
           const cleanProduct = intent.product
-            .replace(/(?:under|below|less than|within|max)\s*(?:₹|rs)?\s*(\d+(?:,\d+)*)/i, "")
+            .replace(/(?:under|below|less than|within|max)\s*(?:₹|rs)?\s*([\d,]+(?:[.]\d+)?)/i, "")
             .trim();
           
-          const products = cleanProduct.split(", ").map(p => p.trim());
+          const products = cleanProduct
+            .split(/,|\band\b|\+|\&/i)
+            .map(p => p.trim())
+            .filter(p => p.length > 0);
+
           query.$or = products.flatMap(p => [
             { item: { $regex: p, $options: "i" } },
             { category: { $regex: p, $options: "i" } },
@@ -252,7 +256,7 @@ export const resolvers = {
         if (intent.color) query.color = { $regex: intent.color, $options: "i" };
         // Improved budget detection from product string if budget field is missing
         if (!parsedBudget && intent.product) {
-          const budgetMatch = intent.product.match(/(?:under|below|less than|within|max)\s*(?:₹|rs)?\s*(\d+(?:,\d+)*)/i);
+          const budgetMatch = intent.product.match(/(?:under|below|less than|within|max)\s*(?:₹|rs)?\s*([\d,]+(?:[.]\d+)?)/i);
           if (budgetMatch) {
             parsedBudget = parseInt(budgetMatch[1].replace(/,/g, ""));
           }

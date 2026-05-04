@@ -178,11 +178,12 @@ export async function analyzeIntent(userInput) {
       if (lower.includes(color)) { intent.color = color; break; }
     }
 
-    // 3. Budget — handles "under 2k", "under ₹2000", "under 500", etc.
-    const budgetMatch = lower.match(/under\s*(?:rs\.?|₹)?\s*(\d+(?:[.,]\d+)?)\s*(k)?/);
+    // 3. Budget — handles "under 2k", "under ₹2,000", "below 500", etc.
+    const budgetMatch = lower.match(/(?:under|below|less than|max|within)\s*(?:rs\.?|₹)?\s*([\d,]+(?:[.]\d+)?)\s*(k)?/i);
     if (budgetMatch) {
-      let num = parseFloat(budgetMatch[1].replace(",", ""));
-      if (budgetMatch[2] === "k") num *= 1000;
+      let numStr = budgetMatch[1].replace(/,/g, "");
+      let num = parseFloat(numStr);
+      if (budgetMatch[2] && budgetMatch[2].toLowerCase() === "k") num *= 1000;
       intent.budget = num.toString();
     }
 
@@ -201,11 +202,12 @@ Extract structured JSON from user shopping queries.
 "Mom Jeans" is a type of jeans, NOT a gift for mom.
 Return ONLY valid JSON:
 {
-  "product": "<specific product type e.g. Jeans, Dress, Lipstick, Sneakers, Coffee>",
+  "product": "<comma separated list of product types e.g. Jeans, Sneakers, Coffee>",
   "color": "<color if mentioned, else empty>",
   "budget": "<number only if mentioned e.g. '2000', else empty>",
   "additional_request": "<any other preference>"
-}`,
+}
+If multiple items are requested (e.g. "Shoes and Coffee"), list them all in "product" separated by commas.`,
         },
         { role: "user", content: userInput },
       ],

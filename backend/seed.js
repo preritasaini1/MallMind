@@ -11,11 +11,16 @@ const items = [
   { store: "Zara", item: "White Summer Dress", category: "Dress", price: 4999, color: "white", stock: 15, floor: 1, x: 300, y: 150 },
   { store: "Zara", item: "Red Stiletto Heels", category: "Footwear", price: 3499, color: "red", stock: 8, floor: 1, x: 300, y: 150 },
   { store: "Zara", item: "Slim Fit Jeans", category: "Jeans", price: 3999, color: "blue", stock: 12, floor: 1, x: 300, y: 150 },
+  { store: "Zara", item: "Sky Blue Oxford Shirt", category: "Shirt", price: 3990, color: "blue", stock: 10, floor: 1, x: 300, y: 150 },
+  { store: "Zara", item: "Navy Blue Linen Shirt", category: "Shirt", price: 4590, color: "blue", stock: 7, floor: 1, x: 300, y: 150 },
 
   { store: "H&M", item: "Black Suit Jacket", category: "Suit", price: 5999, color: "black", stock: 4, floor: 2, x: 150, y: 170 },
   { store: "H&M", item: "White Sneakers", category: "Sneakers", price: 3500, color: "white", stock: 12, floor: 2, x: 150, y: 170 },
   { store: "H&M", item: "Oversized Hoodie", category: "Hoodie", price: 2299, color: "grey", stock: 20, floor: 2, x: 150, y: 170 },
   { store: "H&M", item: "Regular Jeans", category: "Jeans", price: 2499, color: "blue", stock: 30, floor: 2, x: 150, y: 170 },
+  { store: "H&M", item: "Light Blue Cotton Shirt", category: "Shirt", price: 1499, color: "blue", stock: 25, floor: 2, x: 150, y: 170 },
+  { store: "H&M", item: "Patterned Blue Shirt", category: "Shirt", price: 2299, color: "blue", stock: 15, floor: 2, x: 150, y: 170 },
+  { store: "H&M", item: "Blue Slim Fit Suit", category: "Suit", price: 6999, color: "blue", stock: 5, floor: 2, x: 150, y: 170 },
 
   { store: "Puma", item: "Running Shoes", category: "Sneakers", price: 4500, color: "blue", stock: 10, floor: 1, x: 302, y: 195 },
   { store: "Puma", item: "Track Pants", category: "Pants", price: 2500, color: "black", stock: 15, floor: 1, x: 302, y: 195 },
