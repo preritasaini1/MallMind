@@ -48,7 +48,9 @@ We built a scalable PWA that:
 
 MallMind is powered by a **Multi-Agent Orchestration Layer**. Instead of a single chatbot, a team of specialized agents collaborates to serve the user:
 
-![Six Agents Workflow](Photos/Six_Agents.png)
+<div align="center">
+  <img src="./Photos/Six_Agents.png" width="600" alt="Six Agents Workflow">
+</div>
 
 - **🕵️‍♂️ Inventory Scout:** Queries store APIs for specific items, sizes, and pricing.
 - **👗 Personal Stylist:** Matches recommendations to the user's style and occasion.
@@ -105,7 +107,9 @@ MallMind/
 
 Scan the QR code below to instantly launch the MallMind concierge on your smartphone. Experience the full PWA features, including indoor navigation and AI chat, without any installation.
 
-![MallMind App QR](Photos/MallMind_App_QR.png)
+<div align="center">
+  <img src="./Photos/MallMind_App_QR.png" width="250" alt="MallMind App QR">
+</div>
 
 ---
 
@@ -134,4 +138,4 @@ npm run dev
 
 ---
 
-Made with ❤️ by the MallMind Team.
+Made with ❤️ by Prerita.
