@@ -138,4 +138,4 @@ npm run dev
 
 ---
 
-Made with ❤️ by Prerita.
+Made with ❤️ by Prerita Saini.
