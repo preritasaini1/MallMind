@@ -1,195 +1,129 @@
-# 🏬 Mall-Mind  
+# 🏬 MallMind  
 ### Hyper-Personalized Agentic Shopping Concierge for Smart Malls
 
-Mall-Mind is a mobile-first Progressive Web Application (PWA) designed to transform traditional mall experiences using Agentic AI.  
-It brings e-commerce–level personalization, intelligence, and automation into physical retail environments.
-
-The system uses multiple intelligent agents to understand user intent, check simulated real-time inventory, generate optimized indoor routes, and provide dynamic shopping assistance — all without requiring app installation.
+![MallMind Dashboard](./photos/Dashboard.png)
 
 ---
-## 📖 Overview
 
-With the rapid growth of platforms like Amazon and Flipkart, physical malls struggle with personalization and digital intelligence. Shoppers often feel overwhelmed by numerous stores and lack real-time visibility into inventory, discounts, and navigation.
-Mall-Mind bridges this gap by combining AI-driven personalization with real-world shopping experiences.
+## 📖 Overview  
+**MallMind** is a state-of-the-art mobile-first Progressive Web Application (PWA) designed to revolutionize the physical mall experience through **Agentic AI**. It bridges the gap between traditional retail and digital intelligence, providing shoppers with a real-time, AI-powered concierge that handles everything from product discovery to complex indoor navigation.
 
-## Architecture :
+In an era dominated by e-commerce, MallMind brings personalization and digital visibility back to the mall, allowing shoppers to interact with their environment conversationally and efficiently.
+
+---
+
+## 📸 Application Preview  
+
+| **AI Chat Concierge** | **Smart Navigation** |
+|:---:|:---:|
+| ![Chat Interface](./photos/Chat_interface.png) | ![Route Navigation](./photos/Closeststore_route.png) |
+| *Conversational AI understands intent and budget* | *Real-time route optimization between stores* |
+
+| **Live Inventory Scout** | **Virtual Try-On (GenAI)** |
+|:---:|:---:|
+| ![Live Inventory](./photos/Live_Inventory.png) | ![Try-On Feature](./photos/Tryon_feature.png) |
+| *Simulated real-time stock and pricing checks* | *Advanced AI-powered visual try-on experience* |
+
+---
+
+## 🎯 The Core Problem & Our Solution  
+
+### 🚩 The Challenge
+Physical malls currently suffer from:
+- **Fragmentation:** Lack of personalized store recommendations.
+- **Invisibility:** No real-time inventory visibility across brands.
+- **Staticity:** Outdated static maps and zero route optimization.
+- **Lost Opportunities:** Inability to leverage session-level visitor data.
+
+### 💡 The MallMind Objective
+We built a scalable PWA that:
+- **Deciphers Intent:** Uses Natural Language Processing to understand shopping goals.
+- **Aggregates Inventory:** Recommends relevant stores based on live availability.
+- **Optimizes Movement:** Generates the most efficient walking routes.
+- **Visualizes Purchases:** Enables AI-powered virtual try-on experiences.
+
+---
+
+## 🧠 Agentic AI Architecture  
+
+MallMind is powered by a **Multi-Agent Orchestration Layer**. Instead of a single chatbot, a team of specialized agents collaborates to serve the user:
+
+![Six Agents Workflow](./photos/Six_Agents.png)
+
+- **🕵️‍♂️ Inventory Scout:** Queries store APIs for specific items, sizes, and pricing.
+- **👗 Personal Stylist:** Matches recommendations to the user's style and occasion.
+- **🗺️ Smart Navigator:** Calculates the shortest path between store centers using a mall-wide graph.
+- **🏷️ Deal Negotiator:** Identifies active promotions and offers tailored to the user.
+
+---
+
+## 📂 Project Structure  
+
+```bash
+MallMind/
+├── frontend/             # Next.js 14 + React Application
+│   ├── pages/            # App routes (Chat, Map, Onboard)
+│   ├── components/       # UI Components (ChatBox, StoreCard, MapModal)
+│   ├── styles/           # Global & Glassmorphism CSS
+│   └── public/           # Static assets & icons
+├── backend/              # Node.js + GraphQL API
+│   ├── agents/           # 🤖 Multi-Agent Logic (Stylist, Scout, etc.)
+│   ├── graphql/          # 🖇️ Schema & Resolvers (Apollo Server)
+│   ├── models/           # 🗄️ MongoDB/Mongoose Schemas
+│   ├── server.js         # 🚀 API entry point
+│   └── seed.js           # 🌱 Database seeding script
+└── photos/               # 🖼️ Application screenshots & assets
 ```
-MallMind
-│
-├── backend
-│ ├── agents
-│ │ ├── stylistAgent.js
-│ │ └── inventoryAgent.js
-│ │
-│ ├── graphql
-│ │ ├── schema.js
-│ │ └── resolvers.js
-│ │
-│ ├── navigation
-│ │ └── mallGraph.js
-│ │
-│ ├── models
-│ │ └── User.js
-│ │
-│ ├── middleware
-│ │ ├── auth.js
-│ │ └── rateLimiter.js
-│ │
-│ ├── tests
-│ │ └── api.test.js
-│ │
-│ ├── server.js
-│ └── package.json
-│
-├── frontend
-│ ├── pages
-│ │ ├── index.js
-│ │ └── chat.js
-│ │
-│ ├── components
-│ │ ├── ChatBox.js
-│ │ └── StoreCard.js
-│ │
-│ └── package.json
-│
-├── docs
-│ ├── synopsis.pdf
-│ └── architecture.png
-│
-├── .github
-│ └── workflows
-│ └── ci.yml
-│
-├── README.md
-└── docker-compose.yml
-```
-
-## 🎯 Problem Statement
-
-Physical malls currently:
-
-- Lack personalized store recommendations  
-- Do not provide real-time inventory visibility  
-- Offer static navigation maps  
-- Cannot optimize walking routes  
-- Do not leverage session-level visitor data  
 
 ---
 
-## 🚀 Objective
-
-To design and develop a scalable Progressive Web Application (PWA) that:
-
-- Understands shopping intent using natural language  
-- Recommends relevant stores based on preferences  
-- Checks simulated real-time inventory across brands  
-- Generates optimized indoor walking routes  
-- Enables AI-powered virtual try-on experiences  
-- Supports dynamic promotional logic  
-
----
-
-## 🧠 System Architecture
-
-Mall-Mind follows a modular layered architecture:
-
-### 🖥 Frontend Layer
-- Built using **React + Next.js**
-- Mobile-first PWA (no installation required)
-- Interactive UI for shopping input and navigation
-
-### ⚙ Backend Layer
-- Developed using **Node.js + GraphQL**
-- Handles session management and API orchestration
-- Connects AI agents with store data
-
-### 🗄 Data Layer
-- **PostgreSQL** for structured session data
-- **MongoDB** for flexible inventory and interaction data
-
-### 🤖 AI Layer
-- Powered by **OpenAI Assistants API**
-- Coordinates autonomous agents (Stylist, Scout, Navigator, Negotiator)
-
-### 🗺 Mapping Engine
-- Integrated with **Mapbox Indoor SDK**
-- Provides optimized in-mall navigation
-
----
-
-## ✨ Key Features
-
-### 🔹 QR-Based Smart Onboarding
-Visitors scan a QR code at the mall entrance to instantly start a session.
-
-### 🔹 Natural Language Shopping Input
-Users describe their needs conversationally:
-> "I need a blue suit under $300 and coffee."
-
-The AI extracts product type, color, budget, and preferences.
-
-### 🔹 Inventory Scout Agent
-- Queries simulated store APIs  
-- Matches availability, size, price, and color  
-- Recommends relevant stores only  
-
-### 🔹 Personal Stylist Agent
-- Understands style, occasion, and budget  
-- Provides tailored product recommendations  
-
-### 🔹 Smart Indoor Navigation
-- Interactive mall map  
-- Optimized walking routes  
-- Dynamic rerouting when required  
-
-### 🔹 Virtual Try-On (Generative AI)
-- Users upload a selfie  
-- AI simulates clothing fit  
-- Improves purchase confidence  
-
----
-
-## 👥 Stakeholders
+## 👥 Stakeholders & Impact  
 
 | Stakeholder      | Value Delivered |
 |-----------------|----------------|
-| Shoppers        | Faster, personalized, stress-free shopping |
-| Store Managers  | Increased engagement and conversion insights |
-| Mall Admin      | Visitor analytics and operational efficiency |
+| **Shoppers**        | Faster, personalized, stress-free shopping experience |
+| **Store Managers**  | Increased footfall, higher engagement, and conversion insights |
+| **Mall Admin**      | Granular visitor analytics and operational efficiency |
+
+### 📊 Performance Targets
+- **≥30%** reduction in total shopping time.
+- **≥40%** improvement in store recommendation relevance.
+- **≥95%** accuracy in indoor navigation and routing.
 
 ---
 
-## 🔐 Security & Privacy
+## 🔐 Security & Privacy  
 
-- JWT-based authentication  
-- HTTPS encrypted communication  
-- Temporary anonymized sessions  
-- No permanent storage of personal images  
-- Automatic session expiry  
-
----
-
-## 📊 Performance Goals
-
-- ≥30% reduction in shopping time  
-- ≥40% improvement in store relevance  
-- ≥20% increase in conversion via dynamic offers  
-- ≥95% indoor navigation accuracy  
+- **Session Security:** JWT-based authentication for temporary sessions.
+- **Data Encryption:** HTTPS encrypted communication for all API traffic.
+- **Privacy First:** No permanent storage of user photos used for virtual try-on.
+- **Auto-Expiry:** Sessions automatically expire after inactivity to protect user data.
 
 ---
 
-## 🛠 Installation & Setup (Development)
+## 🛠 Installation & Setup  
 
+### 1. Prerequisites
+- Node.js (v18+)
+- MongoDB Atlas Account
+- OpenAI API Key
+
+### 2. Backend Setup
 ```bash
-# Clone repository
-git clone https://github.com/your-username/mall-mind.git
-
-# Backend setup
 cd backend
 npm install
+# Configure .env with MONGO_URI and OPENAI_API_KEY
 npm start
+```
 
-# Frontend setup
+### 3. Frontend Setup
+```bash
 cd frontend
 npm install
+# Configure NEXT_PUBLIC_API_URL in .env
 npm run dev
+```
+
+---
+
+Made with ❤️ by the MallMind Team.
