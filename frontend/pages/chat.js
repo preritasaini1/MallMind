@@ -5,8 +5,8 @@ import StoreCard from '../components/StoreCard';
 import { fetchShoppingRecommendations } from '../lib/api';
 
 const QUICK_PROMPTS = [
-  "Lipstick under ₹500",
   "Home decor",
+  "Lipstick under ₹500",
   "Gift for mom under ₹2k",
   "Kids birthday outfit",
   "Bed sheet + Pillows",
