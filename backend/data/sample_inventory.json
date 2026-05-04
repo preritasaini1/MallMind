@@ -1,0 +1,22 @@
+[
+  {
+    "store": "Zara",
+    "item": "Blue Denim Jacket",
+    "price": 45,
+    "color": "blue",
+    "stock": 5,
+    "floor": 1,
+    "x": 10,
+    "y": 20
+  },
+  {
+    "store": "H&M",
+    "item": "Black Suit",
+    "price": 120,
+    "color": "black",
+    "stock": 4,
+    "floor": 2,
+    "x": 15,
+    "y": 12
+  }
+]
